@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+:root {
+    --main-gradient: linear-gradient(to bottom, #fe7300 #fe014e)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+#ids {
+    position: absolute;
+    display: grid;
+    right: 30px;
+    top: 30px;
+    min-height: 50px;
+    min-width: 200px;
+    border-radius: 20px;
+    background-color: #111111;
+    color: #f4f4f4;
+    grid-template-columns: auto auto;
+    grid-template-rows: 10fr;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Lexend', sans-serif;
+    /* box-shadow: 0 0 .5rem #070707; */
+}
+
+#ids-left {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 15fr;
+    grid-template-rows: repeat(2, 15fr);
+    padding: 1rem;
+}
+
+#cid {
+    align-self: end;
+    display: inline-block;
+    margin: 2px 0;
+    font-size: 14px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#id {
+    display: inline-block;
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 2px 0;
+    align-self: start;
+    font-size: 14px;
+}
+
+#name {
+    display: inline-block;
+    margin: 0 10px;
+    grid-area: 1 / 2 / 2 / 3;
+    /* justify-self: center; */
+    font-size: 24px;
+}
+
+#cid-output {
+    display: inline-block;
+}
+
+#id-output {
+    display: inline-block;
+}
+
+#name-output {
+    display: inline-block;
+}
+
+#needs-container {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    /* border: 1px solid #7bff00; */
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.needs {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid #ff0000; */
+    width: 225px;
+    height: 50px;
+    transition: 1s ease-in-out;
+
+}
+
+.needs-component {
+    position: relative;
+    display: flex;
+    aspect-ratio: 1/1;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #111111;
+    /* box-shadow: 0 0 .5rem #070707; */
+    justify-content: center;
+    align-items: center;
+}
+
+i, svg {
+    font-size: 25px;
+    color: #f4f4f4;
+}
+
+#hp-output {
+    position: absolute;
+    top: 12px;
+}
+
+#armor-output {
+    position: absolute;
+    top: 12px;
+}
+
+#oxygen-output {
+    position: absolute;
+    top: 12px;
+}
+
+#food-output {
+    position: absolute;
+    top: 12px;
+}
+
+#water-output {
+    position: absolute;
+    top: 12px;
+}
+
+#mic-output {
+    position: absolute;
+    top: 12px;
+}
+
+#hp-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#hp-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+#food-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#food-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+#water-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#water-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+#mic-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    stroke-width: 30px;
+    transition: .5s ease-in-out;
+}
+
+#mic-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+.street-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 50px;
+    width: 300px;
+    background-color: #111111;
+    /* box-shadow: 0 0 .5rem #070707; */
+    border-radius: 15px;
+    transition: 1s ease-in-out;
+}
+
+#street-output {
+    color: #f4f4f4;
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+}
+
+#fuel-container {
+    position: absolute;
+    display: flex;
+    left: -60px;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    background-color: #111111;
+    /* box-shadow: 0 0 .5rem #070707; */
+    justify-content: center;
+    align-items: center;
+}
+
+#fuel-output {
+    position: absolute;
+    top: 12px;
+}
+
+#fuel-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#fuel-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+#seatbelt-container {
+    position: absolute;
+    display: flex;
+    left: -120px;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    background-color: #111111;
+    /* box-shadow: 0 0 .5rem #070707; */
+    justify-content: center;
+    align-items: center;
+}
+
+#seatbelt-output {
+    position: absolute;
+    top: 12px;
+}
+
+#seatbelt-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#seatbelt-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+#vel-container {
+    position: absolute;
+    display: flex;
+    right: -130px;
+    height: 50px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: #111111;
+    /* box-shadow: 0 0 .5rem #070707; */
+    justify-content: center;
+    align-items: center;
+}
+
+#vel-output {
+    color: #f4f4f4;
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+}
+
+#armor-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#armor-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+
+
+#oxygen-icon {
+    fill: none;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    stroke: url(#grad1);
+    stroke-width: 30px;
+    transition: .2s ease-in-out;
+}
+
+#oxygen-icon-bg {
+    fill: none;
+    stroke: url(#grad2);
+    stroke-width: 30px;
+}
+.more {
+    width: 275px;
+}
+
+.more2 {
+    width: 350px;
+}
+
+#minimap {
+    position: absolute;
+    bottom: 30px;
+    left: 24px;
+    background-color: transparent;
+    border: 3px solid #111111;
+    width: 298px;
+    height: 210px;
+    border-radius: 20px;
+}
+/* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); - start 
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+*/
