@@ -1,1 +1,1 @@
-"# d_hud" 
+# SIMPLE HUD FOR QB-CORE
